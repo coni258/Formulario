@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Este es un formulario realmente de pana </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="jquery.rut.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <form id="validacion-live" class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">RUT</label>
+        <div class="controls">
+          <input type="text" placeholder="14.569.484-1" />
+          <span class="help-inline">RUT Chileno</span>
+        </div>
+      </div>  
+  </body>
+  <script>
+    $(function() {
+      $("form#validacion-live input").rut({formatOn: 'keyup', validateOn: 'keyup'}).on('rutInvalido', function(){ $(this).parents(".control-group").addClass("error")}).on('rutValido', function(){ $(this).parents(".control-group").removeClass("error")});
+    })
+  </script>
+</html>
