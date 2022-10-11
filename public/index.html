@@ -3,27 +3,45 @@
   <head>
     <title> Este es un formulario realmente de pana </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="jquery.rut.js"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-
+    
   </head>
   <body>
-    <form id="validacion-live" class="form-horizontal">
-      <div class="control-group">
-        <label class="control-label" for="inputEmail">RUT</label>
-        <div class="controls">
-          <input type="text" placeholder="14.569.484-1" />
-          <span class="help-inline">RUT Chileno</span>
-        </div>
-      </div>  
+  <div>
+
+      <label for="fname">Nombre</label>
+      <input type="text" placeholder="Ingrese nombre">
+
+      <label for="lnamef">Apellido paterno</label>
+      <input type="text" placeholder="Ingrese apellido paterno">
+
+      <label for="lnamem">Apellido materno</label>
+      <input type="text" placeholder="Ingrese apellido materno">
+      
+      <form id="validacion-live" class="form-horizontal">
+        <label for="rut">RUT</label>
+        <input type="text" id="rut" name="rut" placeholder="Ingrese RUT Chileno">
+      </form>
+
+      <label for="grade">Escolaridad</label>
+      <select id="grade" name="grade">
+        <option value="">Seleccione escolaridad</option>
+        <option value="salacuna">Sala Cuna: 84 días hasta 2 años</option>
+        <option value="medio">Medio: desde 2 hasta 4 años</option>
+        <option value="transicion">Transición: desde 5 hasta 6 años</option>
+        <option value="gnralbasI">Enseñanza General Básica Ciclo I: 1°, 2°, 3° y 4 año</option>
+        <option value="gnralbasII">Enseñanza General Básica Ciclo II: 5°, 6°, 7° y 8° año</option>
+        <option value="ensmed">Enseñanza media</option>
+        <option value="superior">Educación superior</option>
+      </select>
+
+      <label for="birthday">Año de nacimiento</label>
+      <br>
+      <input type="date" id="birthday" name="birthday"> 
+
+  </div>
   </body>
   <script>
     $(function() {
